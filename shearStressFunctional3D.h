@@ -16,8 +16,7 @@ class ShearSingleProbe3D :
     public ReductiveBoxProcessingFunctional3D_L<T,Descriptor>
 {
 public:
-    ShearSingleProbe3D(std::vector<Array<T,3> > const& positions_) : 
-        positions (positions_) {}
+    ShearSingleProbe3D(std::vector<Array<T,3> > const& positions_);
     virtual void process(Box3D domain, BlockLattice3D<T,Descriptor>& lattice);
     virtual ShearSingleProbe3D<T,Descriptor>* clone() const;
     virtual void getTypeOfModification(std::vector<modif::ModifT>& modified) const {
